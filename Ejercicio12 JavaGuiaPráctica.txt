@@ -1,0 +1,15 @@
+int aux1 = 0;
+        int aux2 = 0;
+        String frase;
+        do {
+            System.out.println("Ingrese una frase o palabra de 5 caracteres");
+            frase = leer.nextLine();
+            if (frase.length() == 5 && frase.substring(0, 1).equalsIgnoreCase("x") && frase.substring(4, 5).equalsIgnoreCase("o")) {
+                aux1++;
+            } else if (!frase.equals("&&&&&")) {
+                aux2++;
+            }
+        } while (!frase.equals("&&&&&"));
+
+        System.out.println("La cantidad de ingresos correctos es: " + aux1);
+        System.out.println("La cantidad de ingresos incorrectos es: " + aux2);
